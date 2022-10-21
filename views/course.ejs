@@ -1,5 +1,24 @@
-<h1>COURSE</h1>
-<hr>
-<h1>COURSE NAME: <%= course.name %></h1>
-<h1>COURSE DESCRIPTION: <%= course.description %></h1>
-<h1>COURSE AUTHOR: <%= course.author.name %></h1>
+<div class="container">
+  <h1>This page shows course info</h1>
+  <hr />
+  <span
+    ><h3>Course Name:</h3>
+    <p><%= course.name %></p></span
+  >
+
+  <span
+    ><h3>Course Description:</h3>
+    <p><%= course.description %></p></span
+  >
+
+  <span>
+    <h3>Course Coordinator:</h3>
+    <%= course.author.name %>
+  </span>
+</div>
+
+<div class="container course-btns-div">
+  <a href="/" class="anchor-btn">Homepage</a>
+  <a href="/courses" class="anchor-btn">Courses</a>
+  <a href="/preference" class="anchor-btn">Preference</a>
+</div>
