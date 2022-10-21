@@ -1,0 +1,17 @@
+<div>
+  <header class="login-header">
+    <a href="/" class="login-logo container">UTS</a>
+  </header>
+  <div class="container">
+    <h2 class="result-title">We recommend the following courses for you</h2>
+    <ul>
+        <% for(let i=0; i<courses.length; i++){ %>
+            <li><%= courses[i] %></li>
+        <% } %>
+    </ul>
+    
+    <a href="/preference" class="primary-btn">Change Preferences</a>
+    <a href="/" class="primary-btn">Homepage</a>
+
+  </div>
+</div>

@@ -1,0 +1,66 @@
+<section class="course-recommender-section">
+  <header class="cr-header">
+    <a href="/" class="cr-logo container">UTS</a>
+  </header>
+
+  <div>
+    <div class="rc-top-div container">
+      <h1>Course Recommender</h1>
+
+      <p>
+        Pick any titles from area of interest and our program will recommend
+        courses that best suits you
+      </p>
+    </div>
+    
+    <hr class="rc-line" />
+
+    <form accept="/preference" method="post" class="container">
+
+      
+     <h1 class="rc-study-level">Study Level</h1>
+
+      <div>
+        <input type="radio" id="1"
+         name="1" value="1">
+        <label for="1">1 Year</label>
+  
+        <input type="radio" id="2"
+         name="2" value="2">
+        <label for="2">2 Year</label>
+  
+        <input type="radio" id="3"
+         name="3" value="3">
+        <label for="3">3 Year</label>
+
+        <input type="radio" id="4"
+         name="4" value="4">
+        <label for="4">4 Year</label>
+
+        <input type="radio" id="5"
+         name="5" value="5">
+        <label for="5">5 Year</label>
+      </div>
+
+      <h1 class="rc-poi">Points of interest</h1>
+
+      <div class="cr-form">
+        <% for(let i=0; i<fields.length; i++){ %>
+          <div class="rc-form-checkbox">
+            <input
+              type="checkbox"
+              id="<%= fields[i] %>"
+              name="<%= fields[i] %>"
+              value="<%= fields[i] %>"
+            />
+            <label for="<%= fields[i] %>"><%= fields[i] %></label>
+          </div>
+        <% } %>
+      </div>
+      
+
+      <input type="submit" value="SUBMIT" class="primary-btn rc-form-submit" />
+    </form>
+    
+  </div>
+</section>
