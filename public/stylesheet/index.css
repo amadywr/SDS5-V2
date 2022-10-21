@@ -288,7 +288,6 @@ header {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
-  /* align-items: center; */
 }
 
 .dashboard-course {
@@ -322,68 +321,14 @@ header {
   gap: 10px;
 }
 
-/* .dash-header {
-  height: 20vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 100px;
-}
-
-.dash-logo:link,
-.dash-logo:visited {
-  text-decoration: none;
-  color: #000;
-}
-
-.subjects-section {
-  padding: 50px 0;
-}
-
-.subject {
-  width: 200px;
-  height: 150px;
-  border: 2px solid black;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.subject-name {
-  font-size: 40px;
-}
-
-.subject-btn {
-  text-decoration: none;
-  background-color: #000;
-  color: #fff;
-  font-size: 15px;
-  padding: 5px 8px;
-  display: inline-block;
-  border-radius: 20px;
-  /* margin-top: 10px; */
-/* border: none;
-}
-
-.subject-btn:hover {
-  box-shadow: inset 0px 0px 0px 3px #000000;
-  color: #000;
-  background: none;
-}
-
-.dash-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
-} */
-
 .dashboard-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.dashboard-courses-title {
+  margin: 20px 0;
 }
 
 /* //////////// ADD COURSE /////////// */
@@ -393,7 +338,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .courses-title {
@@ -405,7 +350,46 @@ header {
   text-decoration: underline;
 }
 
+.form-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-items input {
+  width: 300px;
+}
+
+.form-items label {
+  margin: 0;
+}
+
+.add-course h1 {
+  margin-bottom: 50px;
+}
+
+/* .add-course input[type=submit] {
+  align-self: flex-start;
+} */
+
 /* //////////// Course ///////////// */
 .course-btns-div {
-  margin: 100px auto;
+  margin: 50px auto;
+}
+
+.course {
+  padding-top: 50px;
+}
+
+/* //////////// Courses ///////////// */
+.courses-li {
+  font-size: 40px;
+}
+
+.courses-a {
+  color: #000;
+}
+
+.courses-p {
+  font-size: 20px;
 }

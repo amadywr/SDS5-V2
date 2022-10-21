@@ -1,0 +1,42 @@
+
+<div class="add-course">
+
+    
+  <form action="/users/update-course/<%=course._id%>?_method=PUT" method="post" >
+    <h1>Update Course</h1>
+    <div class="form-items">
+      <label for="name">Course Name</label>
+      <input type="text" name="name" id="name" placeholder="Course name" value="<%=course.name%>"/>
+    </div>
+    
+    
+  
+    <div class="form-items">
+      <label for="atar">Atar</label>
+      <input type="number" name="atar" id="atar" placeholder="Atar" value="<%=course.atar%>"/>
+    </div>
+    
+    <div class="form-items">
+      <label for="location">Location</label>
+      <input type="text" name="location" id="location" placeholder="Location" value="<%=course.location%>"/>
+    </div>
+  
+    <div class="form-items">
+      <label for="duration">Duration</label>
+      <input type="number" name="duration" id="duration" placeholder="Duration" value="<%=course.duration%>" />
+    </div>
+  
+    <div class="form-items">
+      <label for="price">Price</label>
+      <input type="number" name="price" id="price" placeholder="Price" value="<%=course.price%>"/>
+    </div>
+
+    <div class="form-items">
+        <label for="description">Course Description</label>
+      <textarea name="description" id="description" cols="30" rows="5"><%=course.description%></textarea>
+      </div>
+  
+    <input type="submit" value="Update Course" class="primary-btn"/>
+  </form>
+</div>
+

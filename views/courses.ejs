@@ -1,11 +1,12 @@
-<div class="container">
+<div class="container courses">
 
-  <h1 class="courses-title">This is a list of all coursers that UTS offers &darr;</h1>
+  <h1 class="courses-title">List of all coursers UTS offers &darr;</h1>
 
-  <ol>
+  <ol class="courses-ol">
     <% for(let i=0; i<courses.length; i++) { %>
-      <li>
-        <h2><a href="courses/<%=courses[i]._id%>" class="courses-course"><%= courses[i].name %></a></h2>
+      <li class="courses-li">
+        <a class="courses-a" href="courses/<%=courses[i]._id%>" class="courses-course"><%= courses[i].name %></a>
+        <p class="courses-p"><%=courses[i].description%></p>
       </li>
     <% } %>
   </ol>

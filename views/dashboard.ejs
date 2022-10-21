@@ -3,6 +3,7 @@
     <h1 class="mt-4">Dashboard</h1>
 
     <div>
+      <a href="/courses" class="anchor-btn">View all courses</a>
       <a href="/users/add-course" class="anchor-btn">Add Course</a>
       <a href="/users/logout" class="anchor-btn">Logout</a>
     </div>
@@ -12,17 +13,23 @@
 
   <hr>
 
+  <h1 class="dashboard-courses-title">Your Courses</h1>
+
   <div class="dashboard-courses">
     <% for(let i=0; i<courses.length; i++) { %>
+      
       <div class="dashboard-course">
+        
         <h1><%= courses[i].name %></h1>
         <div class="dashboard-courses-btns">
-          <a href="#" class="dashboard-btn">Update</a>
+          <a href="/courses/<%=courses[i]._id%>" class="dashboard-btn">View</a>
+          <a href="/users/update-course/<%=courses[i]._id%>" class="dashboard-btn">Update</a>
           <form action="/courses/<%=courses[i]._id%>?_method=DELETE" method="post">
             <input type="submit" value="Remove" class="dashboard-btn">
           </form>
+          
         </div>
-        
+      
       </div>
       
     <% } %>

@@ -19,7 +19,7 @@ const fields = [
 ]
 
 // Welcome Page
-router.get("/", forwardAuthenticated, (req, res) => {
+router.get("/", (req, res) => {
   res.render("homepage")
 })
 

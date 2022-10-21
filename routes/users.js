@@ -102,16 +102,35 @@ router.get("/add-course", ensureAuthenticated, (req, res) => {
 })
 
 router.post("/add-course", async (req, res) => {
-  const { name, description } = req.body
+ 
+  const { name, description, atar, location, duration, price} = req.body
   const author = req.user._id
 
-  const course = new Course({ name, description, author })
+  const course = new Course({ name, description, atar, location, duration, price, author })
 
   await course.save()
 
-  console.log(course)
-
   res.redirect("/dashboard")
+})
+
+router.get('/update-course/:id', async(req, res)=> {
+
+  const course = await Course.findById(req.params.id)
+  res.render('update-course', {course})
+})
+
+router.put('/update-course/:id', async(req, res)=>{
+
+  const {name, description, atar, location, duration, price} = req.body
+
+  // const course = await Course.findById(req.params.id)
+
+  await Course.findByIdAndUpdate(req.params.id, {name, description, atar, location, duration, price})
+  
+  const course = await Course.findById(req.params.id)
+  console.log('Updated:', course)
+
+  res.redirect('/dashboard')
 })
 
 module.exports = router

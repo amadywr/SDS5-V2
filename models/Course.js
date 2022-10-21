@@ -9,6 +9,22 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  atar: {
+    type: Number,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  duration: {
+    type: Number,
+    required: true
+  },
+  price: {
+    type: Number,
+    required: true
+  },
   author: {
     type: mongoose.SchemaTypes.ObjectId,
     ref: 'User',

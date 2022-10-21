@@ -1,11 +1,47 @@
-<form action="/users/add-course" method="post" class="add-course">
-  <input type="text" name="name" id="name" placeholder="COURSE name" />
-  <input
-    type="text"
-    name="description"
-    id="description"
-    placeholder="COURSE Description"
-  />
 
-  <input type="submit" value="ADD COURSE" />
-</form>
+<div class="add-course">
+  <form action="/users/add-course" method="post" >
+
+    <h1>Add Course</h1>
+
+    <div class="form-items">
+      <label for="name">Course Name</label>
+      <input type="text" name="name" id="name" placeholder="Course name" />
+    </div>
+
+    <div class="form-items">
+      <label for="location">Location</label>
+      <input type="text" name="location" id="location" placeholder="Location" />
+    </div>
+
+    <div class="form-items">
+      <label for="atar">Atar</label>
+      <input type="number" name="atar" id="atar" placeholder="Atar" />
+    </div>
+  
+    <div class="form-items">
+      <label for="duration">Duration</label>
+      <input type="number" name="duration" id="duration" placeholder="Duration" />
+    </div>
+  
+    <div class="form-items">
+      <label for="price">Price</label>
+      <input type="number" name="price" id="price" placeholder="Price" />
+    </div>
+
+    <div class="form-items">
+      <label for="description">Course Description</label>
+      <!-- <input
+      type="text"
+      name="description"
+      id="description"
+      placeholder="COURSE Description"
+    /> -->
+
+    <textarea name="description" id="description" cols="30" rows="5"></textarea>
+    </div>
+  
+    <input type="submit" value="ADD COURSE" class="primary-btn"/>
+  </form>
+</div>
+
