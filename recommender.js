@@ -1,3 +1,5 @@
+// const Course = require('./models/Course')
+
 function recommenderFunction(fields) {
   fields.forEach((field, i) => {
     console.log(i, " ", field)
@@ -12,7 +14,6 @@ function recommenderFunction(fields) {
 
   if (fields.includes("IT")) {
     const IT = ["Software Engineering", "Computer Science", "AI"]
-
     recommendation.push(...IT)
   }
 
