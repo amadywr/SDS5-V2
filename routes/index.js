@@ -6,9 +6,9 @@ const Course = require("../models/Course")
 
 const fields = [
   "Maths",
-  "IT",
-  "Medicine",
-  "Anthropology",
+  "Computers",
+  "Health",
+  "People",
   "History",
   "Law",
   "Languages",
@@ -41,11 +41,24 @@ router.get("/preference", (req, res) => {
   res.render("preference", { fields })
 })
 
-router.post("/preference", (req, res) => {
+router.post("/preference", async(req, res) => {
   const userSelection = Object.values(req.body)
 
+  const recommended = recommender(userSelection)
+
+  let courses = []
+
+  for(let i=0; i<recommended.length; i++){
+    const c = await Course.findById(recommended[i])
+    courses.push(c)
+  }
+
+  courses.forEach((course)=> {
+    course.description = course.description.substring(0, 270) + ' ...'
+  })
+
   res.render("result", {
-    courses: recommender(userSelection),
+    courses: courses,
   })
 })
 

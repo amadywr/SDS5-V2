@@ -282,12 +282,27 @@ header {
   margin: 30px auto;
 }
 
+.result-li {
+  font-size: 20px;
+  color: #000;
+  margin: 0;
+}
+
+.result-a {
+  margin: 0;
+  color: #000;
+  font-weight: 600;
+}
+
+
+
 /* /////////// DASHBOARD /////////// */
 
 .dashboard-courses {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  gap: 20px;
 }
 
 .dashboard-course {

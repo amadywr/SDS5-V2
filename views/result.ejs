@@ -4,9 +4,10 @@
   </header> -->
   <div class="container">
     <h2 class="result-title">We recommend the following courses for you</h2>
-    <ul>
+    <ul class="result-ul">
         <% for(let i=0; i<courses.length; i++){ %>
-            <li><%= courses[i] %></li>
+            <li class="result-li"> <a class="result-a" href="/courses/<%=courses[i]._id%>"><%= courses[i].name %></a> </li>
+            <p class="result-p"><%=courses[i].description%></p>
         <% } %>
     </ul>
     

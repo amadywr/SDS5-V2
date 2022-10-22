@@ -128,7 +128,6 @@ router.put('/update-course/:id', async(req, res)=>{
   await Course.findByIdAndUpdate(req.params.id, {name, description, atar, location, duration, price})
   
   const course = await Course.findById(req.params.id)
-  console.log('Updated:', course)
 
   res.redirect('/dashboard')
 })
