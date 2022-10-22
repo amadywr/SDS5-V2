@@ -23,18 +23,26 @@
 
   <span
     ><h3>Duration:</h3>
-    <p><%= course.duration %></p></span
+    <p><%= course.duration %> Years Full Time</p></span
   >
 
   <span
     ><h3>Price:</h3>
-    <p><%= course.price %></p></span
+    <p>$<%= course.price %></p></span
   >
 
   <span>
-    <h3>Coordinator:</h3>
+    <h3>Course ID:</h3>
+    <p>
+      <%= course._id %>
+    </p>
+  </span>
+
+  <span>
+    <h3>Course Coordinator:</h3>
     <%= course.author.name %>
   </span>
+
 </div>
 
 <div class="container course-btns-div">
