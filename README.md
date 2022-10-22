@@ -1,10 +1,10 @@
-# Node.js & Passport Login
+# Software Design Studio Project
 
-This is a user login and registration app using Node.js, Express, Passport, Mongoose, EJS and some other packages.
-
-### Version: 2.0.0
+A web application where students and choose their preferences and the system shows a list of courses that suits their interest. As well as admins can register and login into their account to add, update and remove a course from their account.
 
 ### Usage
+
+To run the application follow the steps below:
 
 ```sh
 $ npm install
@@ -15,9 +15,7 @@ $ npm start
 # Or run with Nodemon
 $ npm run dev
 
-# Visit http://localhost:5000
+# Visit http://localhost:3000
 ```
 
-### MongoDB
-
-Open "config/keys.js" and add your MongoDB URI, local or Atlas
+### Version: 1.0.0
