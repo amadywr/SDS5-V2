@@ -41,20 +41,22 @@ router.get("/preference", (req, res) => {
   res.render("preference", { fields })
 })
 
-router.post("/preference", async(req, res) => {
+router.post("/preference", async (req, res) => {
   const userSelection = Object.values(req.body)
 
   const recommended = recommender(userSelection)
 
   let courses = []
 
-  for(let i=0; i<recommended.length; i++){
+  for (let i = 0; i < recommended.length; i++) {
     const c = await Course.findById(recommended[i])
-    courses.push(c)
+    if (c) {
+      courses.push(c)
+    }
   }
 
-  courses.forEach((course)=> {
-    course.description = course.description.substring(0, 270) + ' ...'
+  courses.forEach((course) => {
+    course.description = course.description.substring(0, 270) + " ..."
   })
 
   res.render("result", {
