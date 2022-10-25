@@ -56,7 +56,7 @@ router.post("/preference", async (req, res) => {
   }
 
   courses.forEach((course) => {
-    course.description = course.description.substring(0, 270) + " ..."
+    course.description = course.description.substring(0, 250) + " ..."
   })
 
   res.render("result", {
