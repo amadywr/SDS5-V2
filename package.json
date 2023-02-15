@@ -1,15 +1,15 @@
 {
-  "name": "node_passport_login",
-  "version": "2.0.0",
-  "description": "Node.js authentication with Passport",
-  "main": "app.js",
+  "name": "course_management",
+  "version": "1.0.0",
+  "description": "A web app for university course coordinators to manage courses and give new students course recommendations based on their preferences. The application allows course coordinators to create an account in order to create, read, update and delete course.",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Ahmad Yawari",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
