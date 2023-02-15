@@ -6,12 +6,16 @@ A web application where students can choose their preferences and the system sho
 
 To run the application follow the steps below:
 
-### npm install
+### installation
 
-### npm start
+```bash
+  npm install
+```
 
-or run with Nodemon
+### start the application
 
-### npm run dev
+```bash
+  npm start
+```
 
-# Visit http://localhost:3000
+Visit http://localhost:3000
