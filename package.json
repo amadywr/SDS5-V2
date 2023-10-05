@@ -4,8 +4,8 @@
   "description": "A web app for university course coordinators to manage courses and give new students course recommendations based on their preferences. The application allows course coordinators to create an account in order to create, read, update and delete course.",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Ahmad Yawari",
